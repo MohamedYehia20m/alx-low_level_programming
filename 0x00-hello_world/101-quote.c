@@ -1,13 +1,12 @@
 /**
 *main - entry point
-*Desciption:print a string 
-*Return:Always 1 Failure 
+*Desciption:print a string
+*Return:Always 1 Failure
 */
-#include<stdio.h>
-#include<string.h>
-int main(void)
+#include <stdio.h>
+int write(int filedes, const char *buf, unsigned int nbyte);
+int main(int argc, char **argv)
 {
-	char str1[58] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-	write(1,str1,58);
+	write(1, "Hello World!\n", 13);
 	return (1);
 }
