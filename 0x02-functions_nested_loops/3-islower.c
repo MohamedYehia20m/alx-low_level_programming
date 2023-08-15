@@ -3,7 +3,7 @@
  * @c: ascii code of character to be checked
  *
  * Description: checks the case of character using ascii code
- * Return: 0 on uppercase , 1 otherwise
+ * Return: 1 on lowercase , 0 otherwise
  */
 
 #include <unistd.h>
@@ -11,8 +11,8 @@
 
 int _islower(int c)
 {
-	if (c >= 65 && c <= 90)
-		return (0);
-	else
+	if (c >= 97 && c <= 122)
 		return (1);
+	else
+		return (0);
 }
