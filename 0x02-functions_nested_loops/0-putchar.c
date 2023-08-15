@@ -10,10 +10,10 @@
 int main(void)
 {
 	char arr[10] =  "_putchar\n";
-
-	for (int i = 0 ; i < 10 ; i++)
+	int i = 0;
+	while (arr[i] != '\0')
 	{
-		_putchar(arr[i]);
+		_putchar(arr[i++]);
 	}
 
 	return (0);
