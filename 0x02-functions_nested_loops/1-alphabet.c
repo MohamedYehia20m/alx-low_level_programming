@@ -1,11 +1,12 @@
+/**
+ * print_alphabet - This is a description
+ *
+ * Description: write lowercase alphabet to stdout using _putchar() function
+ * Return: returns void
+ */
+
 #include <unistd.h>
 #include "main.h"
-
-/**
-* print_alphabet : write lowercase alphabet to stdout
-* return void
-*
-*/
 
 void print_alphabet(void)
 {
