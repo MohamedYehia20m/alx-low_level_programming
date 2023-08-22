@@ -19,9 +19,15 @@ void puts2(char *str)
 	char a = '\n';
 
 	do {
-
-		write(1, (str + i), 1);
-		i = i + 2;
+		if (*(str + i) != '\0')
+		{
+			write(1, (str + i), 1);
+			i = i + 2;
+		}
+		else
+		{
+			break;
+		}
 	} while (*(str + i) != '\0' && *(str + i - 1) != '\0');
 	write(1, &(a), 1);
 }
