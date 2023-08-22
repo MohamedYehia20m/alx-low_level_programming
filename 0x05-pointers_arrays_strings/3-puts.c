@@ -1,19 +1,24 @@
+#include <unistd.h>
+#include "main.h"
 /**
- * void_puts - function that prints a string, followed by a new line, to stdout.
+ * _puts - function that prints a string, followed by a new line,
+ * to stdout.
  * @str : to char pointer
  *
- * Description: function that prints a string, followed by a new line, to stdout.
- * using to char pointer that loops through the string
+ * Description: function that prints a string, followed by a new line,
+ * to stdout. using to char pointer that loops through the string
  *
  * Return: void
  */
 void _puts(char *str)
 {
 	int i = 0;
-	while(*(str+i) != '\0')
+	char a = '\n';
+
+	while (*(str + i) != '\0')
 	{
-		_putchar(*(str+i));
+		write(1, (str + i), 1);
 		i++;
 	}
-	_putchar('\n');
+	write(1, &(a), 1);
 }
