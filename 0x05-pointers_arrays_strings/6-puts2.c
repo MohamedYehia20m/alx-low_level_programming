@@ -15,14 +15,13 @@
  */
 void puts2(char *str)
 {
-	int i = 1;
+	int i = 0;
 	char a = '\n';
 
-	while (*(str + i) != '\0' && *(str + i - 1) != '\0')
-	{
+	do {
 
-		write(1, (str + i - 1), 1);
+		write(1, (str + i), 1);
 		i = i + 2;
-	}
+	} while (*(str + i) != '\0' && *(str + i - 1) != '\0');
 	write(1, &(a), 1);
 }
