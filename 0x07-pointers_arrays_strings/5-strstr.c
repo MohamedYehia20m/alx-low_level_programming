@@ -11,11 +11,11 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	char* dummy_needle = needle;
-	char* first;
+	char *dummy_needle = needle;
+	char *first;
 	int flag = 0;
 
-	if(*(needle) == '\0')
+	if (*(needle) == '\0')
 		return (haystack);
 	while (*(haystack) != '\0')
 	{
@@ -25,7 +25,7 @@ char *_strstr(char *haystack, char *needle)
 		while (*(haystack) == *(dummy_needle))
 		{
 			if (*(++dummy_needle) == '\0')
-                        {
+			{
 				return (first);
 			}
 			if (flag == 0)
