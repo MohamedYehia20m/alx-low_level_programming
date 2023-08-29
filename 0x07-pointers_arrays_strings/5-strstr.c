@@ -11,15 +11,31 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0;
+	char* dummy_needle = needle;
+	char* first;
+	int flag = 0;
 
-	while (*(haystack + i) != '\0')
+	if(*(needle) == '\0')
+		return (haystack);
+	while (*(haystack) != '\0')
 	{
-		if (*(haystack + i) == *(needle))
+		dummy_needle = needle;
+		flag = 0;
+		first = NULL;
+		while (*(haystack) == *(dummy_needle))
 		{
-			return (haystack + i);
+			if (*(++dummy_needle) == '\0')
+                        {
+				return (first);
+			}
+			if (flag == 0)
+			{
+				first = (haystack);
+				flag = 1;
+			}
+			(haystack++);
 		}
-		i++;
+		(haystack++);
 	}
 	return (NULL);
 }
