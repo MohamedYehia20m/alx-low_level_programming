@@ -12,5 +12,4 @@
 void set_string(char **s, char *to)
 {
 	*s = to;
-	write(1, *(s), 1);
 }
