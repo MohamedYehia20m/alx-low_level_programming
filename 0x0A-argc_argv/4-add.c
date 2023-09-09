@@ -11,9 +11,17 @@
  * Return: 0 for non-numeric , 1 for numeric.
  */
 
-int is_digit(char c)
+int is_digit(char *c)
 {
-	return (isdigit(c));
+	int j = 0;
+
+	while (*(c + j))
+	{
+		if (isdigit(*(c + j)) == 0)
+			return (0);
+		j++;
+	}
+	return (1);
 }
 
 /**
@@ -36,7 +44,7 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-		if (is_digit(*(argv[i])) == 0)
+		if (is_digit((argv[i])) == 0)
 		{
 			printf("Error\n");
 			return (1);
