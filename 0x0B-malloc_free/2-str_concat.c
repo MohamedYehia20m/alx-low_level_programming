@@ -17,6 +17,8 @@ int _strlen(char *s)
 {
 	int i = 0;
 
+	if (s == NULL)
+		return (0);
 	while (*(s + i) != '\0')
 	{
 		i++;
@@ -46,12 +48,12 @@ char *str_concat(char *s1, char *s2)
 	concat = malloc(len1 + len2 + 1);
 	if (concat == NULL)
 		return (NULL);
-	while (*(s1 + i) != '\0')
+	while (i < len1)
 	{
 		*(concat + i) = *(s1 + i);
 		i++;
 	}
-	while (*(s2 + j) != '\0')
+	while (j < len2)
 	{
 		*(concat + i) = *(s2 + j);
 		i++;
