@@ -39,11 +39,15 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	int i = 0;
-	int len = _strlen(str);
+	int len ;
 	char *dup;
 
+	if (str == NULL)
+		return (NULL);
+	else
+		len = _strlen(str);
 	dup = malloc(len * sizeof(char));
-	if (dup == NULL || str == NULL)
+	if (dup == NULL)
 		return (NULL);
 	while (*(str + i) != '\0')
 	{
