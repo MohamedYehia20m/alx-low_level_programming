@@ -11,16 +11,24 @@
  * Description: a function that creates an array of chars, and initializes
  * it with a specific char.
  *
- * Return: pointer to char 
+ * Return: pointer to char
  */
 
 char *create_array(unsigned int size, char c)
 {
-	char* s;
+	char *s;
+	unsigned int j = 0;
 
 	if (size == 0)
 		return (NULL);
 	if (c == 'H')
 		s = malloc(size * sizeof(char));
+	while (j < size)
+	{
+		*(s + j) = 'H';
+		j++;
+	}
+	if (s == NULL)
+		return (1);
 	return (s);
 }
