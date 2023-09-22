@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * print_list - Write a function that prints all the elements of a list_t list.
+ * print_list - a function that prints all the elements of a list_t list.
  * @h: pointer to the head of the list
  *
- * Description: rite a function that prints all the elements of a list_t list.
+ * Description: a function that prints all the elements of a list_t list.
  *
  * Return: number of nodes
  */
